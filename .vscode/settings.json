@@ -4,6 +4,12 @@
         "tinyxml"
     ],
     "files.associations": {
-        "vector": "cpp"
+        "vector": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "iostream": "cpp",
+        "regex": "cpp",
+        "sstream": "cpp"
     }
 }
