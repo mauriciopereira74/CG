@@ -1,4 +1,0 @@
-/Users/mauricio.pereira/Escola/CG/CG/build/CMakeFiles/generator.dir
-/Users/mauricio.pereira/Escola/CG/CG/build/CMakeFiles/engine.dir
-/Users/mauricio.pereira/Escola/CG/CG/build/CMakeFiles/edit_cache.dir
-/Users/mauricio.pereira/Escola/CG/CG/build/CMakeFiles/rebuild_cache.dir
