@@ -1,0 +1,122 @@
+[
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/generator.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator.cpp",
+  "output": "CMakeFiles/generator.dir/generator.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/utils/point.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/point.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/point.cpp",
+  "output": "CMakeFiles/generator.dir/utils/point.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/utils/triangle.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/triangle.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/triangle.cpp",
+  "output": "CMakeFiles/generator.dir/utils/triangle.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/utils/model.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/model.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/model.cpp",
+  "output": "CMakeFiles/generator.dir/utils/model.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/generator/shapes/plane.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/plane.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/plane.cpp",
+  "output": "CMakeFiles/generator.dir/generator/shapes/plane.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/generator/shapes/box.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/box.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/box.cpp",
+  "output": "CMakeFiles/generator.dir/generator/shapes/box.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/generator/shapes/cone.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/cone.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/cone.cpp",
+  "output": "CMakeFiles/generator.dir/generator/shapes/cone.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/generator/shapes/sphere.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/sphere.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/sphere.cpp",
+  "output": "CMakeFiles/generator.dir/generator/shapes/sphere.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/generator.dir/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp",
+  "output": "CMakeFiles/generator.dir/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/engine.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/engine.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/engine.cpp",
+  "output": "CMakeFiles/engine.dir/engine.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/utils/point.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/point.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/point.cpp",
+  "output": "CMakeFiles/engine.dir/utils/point.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/utils/triangle.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/triangle.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/triangle.cpp",
+  "output": "CMakeFiles/engine.dir/utils/triangle.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/utils/model.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/model.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/model.cpp",
+  "output": "CMakeFiles/engine.dir/utils/model.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/generator/shapes/plane.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/plane.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/plane.cpp",
+  "output": "CMakeFiles/engine.dir/generator/shapes/plane.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/generator/shapes/box.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/box.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/box.cpp",
+  "output": "CMakeFiles/engine.dir/generator/shapes/box.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/generator/shapes/cone.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/cone.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/cone.cpp",
+  "output": "CMakeFiles/engine.dir/generator/shapes/cone.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/generator/shapes/sphere.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/sphere.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/generator/shapes/sphere.cpp",
+  "output": "CMakeFiles/engine.dir/generator/shapes/sphere.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp",
+  "output": "CMakeFiles/engine.dir/Users/mauricio.pereira/Escola/CG/CG/include/tinyxml2/tinyxml2.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/utils/world.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/world.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/world.cpp",
+  "output": "CMakeFiles/engine.dir/utils/world.cpp.o"
+},
+{
+  "directory": "/Users/mauricio.pereira/Escola/CG/CG/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -I/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/GLUT.framework/Headers -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/engine.dir/utils/vbo.cpp.o -c /Users/mauricio.pereira/Escola/CG/CG/src/utils/vbo.cpp",
+  "file": "/Users/mauricio.pereira/Escola/CG/CG/src/utils/vbo.cpp",
+  "output": "CMakeFiles/engine.dir/utils/vbo.cpp.o"
+}
+]

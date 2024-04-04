@@ -11,5 +11,6 @@
         "iostream": "cpp",
         "regex": "cpp",
         "sstream": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/mauricio.pereira/Escola/CG/CG/src"
 }
