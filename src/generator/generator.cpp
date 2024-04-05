@@ -16,7 +16,7 @@ using namespace std;
 
 void toFile(char* filename, pair<vector<Point>, vector<Triangle> > pair){
     ofstream file;
-    char path[100] = "../../../demo-scenes/models/";
+    char path[100] = "../../demo-scenes/models/";
 
     file.open(strcat(path, filename));
     char buffer[1024];
