@@ -35,8 +35,6 @@ void Rotate::transform(){
     glRotatef(angle, x, y, z);
 }
 
-
-
 Scale::Scale(float newX, float newY, float newZ){
     x = newX;
     y = newY;

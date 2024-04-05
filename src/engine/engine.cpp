@@ -134,23 +134,6 @@ void processNormalKeys(unsigned char key, int x, int y){
 	glutPostRedisplay();
 }
 
-
-void processSpecialKeys(int key, int x, int y){	
-	switch(key){
-		default:
-			world.camera.processSpecialKeys(key);
-			break;
-	}
-
-	glutPostRedisplay();
-}
-
-
-void processMouseButtons(int button, int state, int x, int y){
-	world.camera.processMouseButtons(button);
-}
-
-
 void processMouseMotion(int x, int y){
 	world.camera.processMouseMotion(x, y);
 }
@@ -162,16 +145,6 @@ void menuCamChoice(int choice){
             world.camera.mode = STATIC;
             break;
         case 1:
-            world.camera.mode = EXPLORER;
-			world.camera.beta = 0;
-
-			world.camera.explorerCenter = Point(world.camera.position.x, world.camera.position.y, world.camera.position.z);
-			world.camera.lookAt.x = world.camera.position.x;
-			world.camera.lookAt.y = world.camera.position.y;
-			world.camera.lookAt.z = world.camera.position.z;
-
-            break;
-        case 2:
             world.camera.mode = FPS;
 			world.camera.beta = 0;
 			world.camera.firstTime = true;
@@ -181,7 +154,6 @@ void menuCamChoice(int choice){
     }
 }
 
-
 void modeChoice(int choice){
 	switch (choice) {
 		case 0:
@@ -190,14 +162,10 @@ void modeChoice(int choice){
 		case 1:
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 			break;
-		case 2:
-			glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
-			break;
 		default:
 			break;
 	}
 }
-
 
 void menuChoice(int choice) {
 	switch (choice) {
@@ -211,20 +179,18 @@ void menuChoice(int choice) {
 void cameraMenu(){
 	int cameraMenu = glutCreateMenu(menuCamChoice);
 	glutAddMenuEntry("Static Camera", 0);
-    glutAddMenuEntry("Explorer Camera", 1);
-	glutAddMenuEntry("FPS Camera", 2);
+	glutAddMenuEntry("FPS Camera", 1);
 
 	int modeMenu = glutCreateMenu(modeChoice);
 	glutAddMenuEntry("Lines", 0);
 	glutAddMenuEntry("Fill", 1);
-	glutAddMenuEntry("Points", 2);
 
 	glutCreateMenu(menuChoice);
 	glutAddMenuEntry("Toggle axis", 0);
 
-	glutAddSubMenu("Camera", cameraMenu);
 	glutAddSubMenu("Mode", modeMenu);
-	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	glutAddSubMenu("Camera", cameraMenu);
+	glutAttachMenu(GLUT_LEFT_BUTTON);
 }
 
 
@@ -234,10 +200,9 @@ int main(int argc, char **argv) {
         cout << "USAGE: ./engine {FILEPATH}.xml" << endl;
 		cout << "note: the filepath must be relative to 'build' folder" << endl;
         cout << "----------------------------------------------------------------------------------------------------" << endl;
-		cout << "OPEN MENU: mouse right button" << endl;
+		cout << "OPEN MENU: mouse left button" << endl;
 		cout << "----------------------------------------------------------------------------------------------------" << endl;
 		cout << "FPS CAMERA MODE      | MOVE: W, A, S, D      | POINT: MOUSE             | INCREASE SPEED: hold SHIFT" << endl;
-		cout << "EXPLORER CAMERA MODE | MOVE: ARROWS or MOUSE | ZOOM: +/- or MOUSE WHEEL" << endl;
 		cout << "----------------------------------------------------------------------------------------------------" << endl;
 
 		return 0;
@@ -259,8 +224,6 @@ int main(int argc, char **argv) {
 	
 	// registration of the keyboard callbacks
 	glutKeyboardFunc(processNormalKeys);
-	glutSpecialFunc(processSpecialKeys);
-	glutMouseFunc(processMouseButtons);
 	glutPassiveMotionFunc(processMouseMotion);
 
 	// init GLEW

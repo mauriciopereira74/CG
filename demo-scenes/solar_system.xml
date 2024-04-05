@@ -14,33 +14,6 @@
             <model file="sphere.3d"/> <!-- generator sphere 6 50 50 sphere.3d -->
         </models>   
 
-        <!-- BELTS -->
-        <group>
-            <color R="147" G="146" B="140"/>    
-            <models>
-                <!-- ASTEROIDS BELT -->
-                <belt file="asteroid.3d" n="2000" seed="51" radiusIn="20" radiusOut="90" verticalAngle="5"/> <!-- ./generator sphere 0.15 20 20 asteroid.3d   -->
-
-                <!-- KUIPER BELT-->
-                <belt file="asteroid.3d" n="20000" seed="12" radiusIn="300" radiusOut="1200" verticalAngle="1"/> <!-- ./generator sphere 0.15 20 20 asteroid.3d   -->
-            </models>
-        </group>
-
-        <!-- ORBITS -->
-        <group>
-            <color R="255" G="255" B="255"/>
-            <models>
-                <model file="mercury_orbit.3d"/> <!-- ./generator torus 0.01 12 80 80 mercury_orbit.3d -->
-                <model file="venus_orbit.3d"/> <!-- ./generator torus 0.01 21 80 80 venus_orbit.3d -->
-                <model file="earth_orbit.3d"/> <!-- ./generator torus 0.01 30 80 80 earth_orbit.3d -->
-                <model file="mars_orbit.3d"/> <!-- ./generator torus 0.01 45 80 80 mars_orbit.3d -->
-                <model file="jupiter_orbit.3d"/> <!-- ./generator torus 0.01 156 80 80 jupiter_orbit.3d -->
-                <model file="saturn_orbit.3d"/> <!-- ./generator torus 0.01 285 80 80 saturn_orbit.3d -->
-                <model file="uranus_orbit.3d"/> <!-- ./generator torus 0.01 570 80 80 uranus_orbit.3d -->
-                <model file="neptune_orbit.3d"/> <!-- ./generator torus 0.01 900 80 80 neptune_orbit.3d -->
-            </models>
-        </group>
-
         <!-- MERCURY -->
         <group>
             <transform> 

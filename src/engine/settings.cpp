@@ -15,7 +15,6 @@ Camera::Camera(){}
 Camera::Camera(XMLElement *cameraElement){
     up = Point(0, 1, 0); // Default value
     projection = Projection(60, 1, 1000); // Default value
-    explorerCenter = Point(0, 0, 0); // Default value
     mode = STATIC;
     radius = 5;
     alpha = 0;
@@ -29,9 +28,6 @@ Camera::Camera(XMLElement *cameraElement){
 
         if(name == "static"){
             mode = STATIC;
-        }
-        else if(name == "explorer"){
-            mode = EXPLORER;
         }
         else if(name == "fps"){
             mode = FPS;
@@ -80,12 +76,6 @@ void Camera::updateLateralDirection(){
     direction.normalizeVector();
 }
 
-void Camera::updateExplorerPosition(){
-    position.x = radius * cos(beta) * sin(alpha) + explorerCenter.x;
-    position.y = radius * sin(beta) + explorerCenter.y;
-    position.z = radius * cos(beta) * cos(alpha) + explorerCenter.z;
-}
-
 void Camera::updateFPSPosition(int coef){
     position.x = position.x + coef * moveSpeed * direction.x;
     position.y = position.y + coef * moveSpeed * direction.y;
@@ -100,20 +90,6 @@ void Camera::processNormalKeys(unsigned char key){
     key = tolower(key);
 
     switch(key){
-        case '-':
-            if(mode == EXPLORER){
-                radius += 5;
-                updateExplorerPosition();
-            }
-            break;
-        case '+':
-            if(mode == EXPLORER){
-                if (radius - 5 < 0)
-                    radius = 0;
-                else radius -= 5;
-                updateExplorerPosition();
-            }
-            break;
         case 'w':
             if(mode == FPS){
                 int mod = glutGetModifiers();
@@ -175,63 +151,8 @@ void Camera::processNormalKeys(unsigned char key){
     }
 }
 
-void Camera::processSpecialKeys(int key){
-    switch(key){
-        case GLUT_KEY_LEFT:
-            if(mode == EXPLORER){
-                alpha -= M_PI / 20;
-                updateExplorerPosition();
-            }
-            break;
-        case GLUT_KEY_RIGHT:
-            if(mode == EXPLORER){
-                alpha += M_PI / 20;
-                updateExplorerPosition();
-            }
-            break;
-        case GLUT_KEY_UP:
-            if(mode == EXPLORER){
-                beta += M_PI / 20;
-
-			    if (beta > M_PI / 2) beta = M_PI / 2;
-                updateExplorerPosition();
-            }
-            break;
-        case GLUT_KEY_DOWN:
-            if(mode == EXPLORER){
-                beta -= M_PI / 20;
-
-			    if (beta < -M_PI / 2) beta = -M_PI / 2;
-                updateExplorerPosition();
-            }
-            break;
-    }
-}
-
-
-void Camera::processMouseButtons(int button){
-    switch (button) {
-        case 3:
-            if (mode == EXPLORER){
-                if (radius - 5 < 0)
-                    radius = 0;
-                else radius -= 5;
-                updateExplorerPosition();
-            }
-            break;
-        case 4:
-            if (mode == EXPLORER){
-                radius += 5;
-                updateExplorerPosition();
-            }
-            break;
-        default:
-            break;
-    }
-}
-
 void Camera::processMouseMotion(int x, int y){
-    if(mode == FPS || mode == EXPLORER){
+    if(mode == FPS){
         if(firstTime){
             firstTime = false;
             startX = x;
@@ -254,9 +175,6 @@ void Camera::processMouseMotion(int x, int y){
             lookAt.x = position.x + sin(alpha) * cos(beta);
             lookAt.y = position.y + sin(beta);
             lookAt.z = position.z - cos(alpha) * cos(beta);
-        }
-        else if(mode == EXPLORER){
-            updateExplorerPosition();
         }
     }
 }
