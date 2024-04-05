@@ -37,6 +37,8 @@ class Projection{
         Projection(float newFov, float newNear, float newFar);
 };
 
+enum Mode{STATIC, FPS};
+
 class Camera{
     public:
         Point position;
@@ -44,6 +46,8 @@ class Camera{
         Point up; 
         Point direction; // vetor d e r
         Projection projection;
+
+        Mode mode;
 
         float radius;
         float alpha;
