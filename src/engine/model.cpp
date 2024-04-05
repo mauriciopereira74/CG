@@ -38,7 +38,7 @@ pair<vector<float>, vector<int> > Model::readFile(char *filename){
         string indP1, indP2, indP3;
         ss >> indP1 >> indP2 >> indP3;
         indexes.push_back(stoi(indP1));
-        indexes.push_back(stoi(indP2));
+        indexes.push_back(stoi(indP2)); 
         indexes.push_back(stoi(indP3));
     }
 

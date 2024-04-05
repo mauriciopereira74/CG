@@ -16,25 +16,25 @@ using namespace std;
 
 void toFile(char* filename, pair<vector<Point>, vector<Triangle> > pair){
     ofstream file;
-    char buffer[1024];
     char path[100] = "../../../demo-scenes/models/";
 
     file.open(strcat(path, filename));
-
+    char buffer[1024];
+    
     int nVertices = pair.first.size(), nTriangles = pair.second.size();
 
-    //(nVertices & nTriangles)
+    //First line (nVertices e nTriangles)
     file << nVertices << " " << nTriangles << "\n";
-
-    //Triangles
-    for(int i = 0; i < nTriangles; i++){
-        sprintf(buffer, "%d %d %d\n", pair.second[i].indP1, pair.second[i].indP2, pair.second[i].indP3);
-        file << buffer;
-    }
 
     //Vertices
     for(int i = 0; i < nVertices; i++){
         sprintf(buffer, "%f %f %f\n", pair.first[i].x, pair.first[i].y, pair.first[i].z);
+        file << buffer;
+    }
+
+    //Triangles
+    for(int i = 0; i < nTriangles; i++){
+        sprintf(buffer, "%d %d %d\n", pair.second[i].indP1, pair.second[i].indP2, pair.second[i].indP3);
         file << buffer;
     }
 
@@ -55,7 +55,6 @@ int main(int argc, char *argv[]){
     char erBox[] = "box ([0-9]+[.])?[0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
     char erCone[] = "cone ([0-9]+[.])?[0-9]+ ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
     char erSphere[] = "sphere ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
-    char erCylinder[] = "cylinder ([0-9]+[.])?[0-9]+ ([0-9]+[.])?[0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
     char erTorus[] = "torus ([0-9]+[.])?[0-9]+ ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
 
     if (regex_match(inp, regex(erPlane))){
@@ -93,15 +92,6 @@ int main(int argc, char *argv[]){
 
         pair<vector<Point>, vector<Triangle> > cone = generateCone(radius, height, slices, stacks);
         toFile(filename, cone);
-    }
-    else if(regex_match(inp, regex(erCylinder))){
-        float radius = atof(argv[2]);
-        float height = atof(argv[3]);
-        int slices = atoi(argv[4]);
-        char *filename = argv[5];
-
-        pair<vector<Point>, vector<Triangle> > cylinder = generateCylinder(radius, height, slices);
-        toFile(filename, cylinder);
     }
     else if(regex_match(inp, regex(erSphere))){
         float radius = atof(argv[2]);
