@@ -16,6 +16,8 @@ class Group{
         vector<Group> groups;
         vector<Model> models;
         vector<Transformation *> transforms;
+
+        
         Point *color;
 
         Group();

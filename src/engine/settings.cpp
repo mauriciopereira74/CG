@@ -15,24 +15,12 @@ Camera::Camera(){}
 Camera::Camera(XMLElement *cameraElement){
     up = Point(0, 1, 0); // Default value
     projection = Projection(60, 1, 1000); // Default value
-    mode = STATIC;
     radius = 5;
     alpha = 0;
     beta = 0;
     moveSpeed = 3;
     rotationSpeed = 0.01;
     firstTime = true;
-
-    if(cameraElement->Attribute("mode")){
-        string name(cameraElement->Attribute("mode"));
-
-        if(name == "static"){
-            mode = STATIC;
-        }
-        else if(name == "fps"){
-            mode = FPS;
-        }
-    }
 
     for(XMLElement *elem = cameraElement->FirstChildElement(); elem; elem=elem->NextSiblingElement()){
         string name(elem->Name());
