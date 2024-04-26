@@ -8,9 +8,8 @@
 #include "../../include/generator/box.h"
 #include "../../include/generator/cone.h"
 #include "../../include/generator/sphere.h"
-#include "../../include/generator/cylinder.h"
 #include "../../include/generator/torus.h"
-#include "../../include/generator/ellipsoid.h"
+#include "../../include/generator/bezier.h"
 
 using namespace std;
 
@@ -42,6 +41,22 @@ void toFile(char* filename, pair<vector<Point>, vector<Triangle> > pair){
 }
 
 int main(int argc, char *argv[]){
+    if (argc == 1 || (argc == 2 && strcmp(argv[1], "--help") == 0)){
+        cout << "-------------------------------------HELP-----------------------------------------" << endl;
+        cout << "USAGE: ./generator {MODEL} {ARGUMENTS} {OUTPUT FILE}" << endl;
+        cout << "----------------------------------------------------------------------------------" << endl;
+        cout << "MODEL     | ARGUMENTS                                                            | OUTPUT FILE" << endl;
+        cout << "plane     | {length} {divisions}                                                 | {filename}.3d" << endl;
+        cout << "box       | {length} {divisions}                                                 | {filename}.3d" << endl;
+        cout << "cone      | {radius} {height} {slices} {stacks}                                  | {filename}.3d" << endl;
+        cout << "sphere    | {radius} {slices} {stacks}                                           | {filename}.3d" << endl;
+        cout << "torus     | {radius_in} {radius_out} {slices} {stacks}                           | {filename}.3d" << endl;
+        cout << "belt      | {n} {radiusIn} {radiusOut} {height} {lengthMin} {lengthMax} {seed}   | {filename}.3d" << endl;
+        cout << "patch     | {filepath}.patch {tesselation_level}                                 | {filename}.3d" << endl;
+        cout << "----------------------------------------------------------------------------------" << endl;
+        
+        return 1;
+    }
 
     string inp;
 
@@ -56,6 +71,7 @@ int main(int argc, char *argv[]){
     char erCone[] = "cone ([0-9]+[.])?[0-9]+ ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
     char erSphere[] = "sphere ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
     char erTorus[] = "torus ([0-9]+[.])?[0-9]+ ([0-9]+[.])?[0-9]+ [0-9]+ [0-9]+ [a-zA-Z0-9_]+\\.3d$";
+    char erBezier[] = "patch [a-zA-Z0-9_/.-]+\\.patch [0-9]+ [a-zA-Z0-9_]+\\.3d$";
 
     if (regex_match(inp, regex(erPlane))){
         float length = atof(argv[2]);
@@ -64,16 +80,6 @@ int main(int argc, char *argv[]){
 
         pair<vector<Point>, vector<Triangle> > plane = generatePlane(length, divisions);
         toFile(filename, plane);
-    }    
-    else if(regex_match(inp, regex(erCone))){
-        float radius = atof(argv[2]);
-        float height = atof(argv[3]);
-        int slices = atoi(argv[4]);
-        int stacks = atoi(argv[5]);
-        char *filename = argv[6];
-
-        pair<vector<Point>, vector<Triangle> > cone = generateCone(radius, height, slices, stacks);
-        toFile(filename, cone);
     }
     else if(regex_match(inp, regex(erBox))){
         float length = atof(argv[2]);
@@ -107,12 +113,21 @@ int main(int argc, char *argv[]){
         float radiusOut = atof(argv[3]);
         int slices = atoi(argv[4]);
         int stacks = atoi(argv[5]);
+
         char *filename = argv[6];
 
         pair<vector<Point>, vector<Triangle> > torus = generateTorus(radiusIn, radiusOut, slices, stacks);
         toFile(filename, torus);
     }
-    else cout << "Invalid input! Please try again!" << endl;
+    else if(regex_match(inp, regex(erBezier))){
+        char *ctrlpoints_file = argv[2];
+        int level = atoi(argv[3]);
+        char *filename = argv[4];
+
+        pair<vector<Point>, vector<Triangle> > bezier = generateBezier(ctrlpoints_file, level);
+        toFile(filename, bezier);
+    }
+    else cout << "Invalid input!" << endl;
 
 
     return 0;

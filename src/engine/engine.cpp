@@ -39,6 +39,41 @@ void showFPS(){
     }
 }
 
+void renderText() {
+	// save projection
+	glMatrixMode(GL_PROJECTION);
+	glPushMatrix();
+	glLoadIdentity();
+
+	// set projection so that coordinates match window pixels
+	gluOrtho2D(0, world.window.width, world.window.height, 0);
+	glMatrixMode(GL_MODELVIEW);
+
+	// disable depth test (assuming text is written in the end)
+	glDisable(GL_DEPTH_TEST);
+
+	// set modelview matrix
+	glPushMatrix();
+	glLoadIdentity();
+	glRasterPos2d(10, 20); // text position in pixels
+
+	// render text
+	char text[100];
+	sprintf(text, "Position: (%f, %f, %f)   |   LookAt: (%f, %f, %f)", world.camera.position.x, world.camera.position.y, world.camera.position.z, 
+																       world.camera.lookAt.x, world.camera.lookAt.y, world.camera.lookAt.z);
+
+	for (char *c = text; *c != '\0'; c++) {
+		glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, *c);
+	}
+
+	// Restore matrices and reenable depth test
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+	glMatrixMode(GL_MODELVIEW);
+	glPopMatrix();
+	glEnable(GL_DEPTH_TEST);
+}
+
 
 void showAxis(){
 	glBegin(GL_LINES);
