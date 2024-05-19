@@ -5,7 +5,7 @@ PROJECT(generator)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_executable(${PROJECT_NAME} generator.cpp ../utils/point.cpp ../utils/triangle.cpp shapes/plane.cpp shapes/box.cpp shapes/cone.cpp shapes/sphere.cpp shapes/torus.cpp ../../include/tinyxml2/tinyxml2.cpp)
+add_executable(${PROJECT_NAME} generator.cpp ../utils/point.cpp ../utils/triangle.cpp shapes/plane.cpp shapes/box.cpp shapes/cone.cpp shapes/sphere.cpp shapes/torus.cpp shapes/bezier.cpp ../../include/tinyxml2/tinyxml2.cpp)
 
 find_package(OpenGL REQUIRED)
 include_directories(${OpenGL_INCLUDE_DIRS})
